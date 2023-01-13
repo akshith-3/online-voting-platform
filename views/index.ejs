@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="csrf-token" content="<%= csrfToken %>" />
     <title>My Voting App</title>
   </head>
   <body>
@@ -26,7 +28,11 @@
         ">
         <h3>
           Already have an account &nbsp;&nbsp;
-          <a href="signin">Sign in</a>
+          <a
+            href="signin"
+            class="px-10 py-5 bg-green-600 hover:bg-green-800 border border-red-300 text-black rounded-full"
+            >Sign in</a
+          >
         </h3>
       </div>
       <div
@@ -38,7 +44,11 @@
         ">
         <h3>
           New User &nbsp;&nbsp;
-          <a href="signup">Sign Up</a>
+          <a
+            href="signup"
+            class="px-10 py-5 bg-green-600 hover:bg-green-800 border border-red-300 text-black rounded-full"
+            >Sign Up</a
+          >
         </h3>
       </div>
     </div>
