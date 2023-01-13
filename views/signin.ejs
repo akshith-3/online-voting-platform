@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>My Voting App</title>
+  </head>
+  <body>
+    <%- include('header.ejs') %>
+    <div
+      style="
+        width: 500px;
+        height: 400px;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #ecfccb;
+        border-radius: 40px;
+        padding-top: 50px;
+      ">
+      <div class="grid grid-cols-8">
+        <div class="col-start-3 col-span-4">
+          <h6 class="py-2 text-xl font-bold">Login in as User</h6>
+          <form action="/elections" method="post">
+            <input type="hidden" />
+            <div class="py-3">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                class="border border-gray-300 text-black-300 rounded p-2 w-full" />
+            </div>
+            <div class="py-3">
+              <label for="passw">Password</label>
+              <input
+                type="password"
+                name="passw"
+                class="border border-gray-300 text-black-300 rounded p-2 w-full" />
+            </div>
+            <div class="py-3">
+              <button
+                type="submit"
+                class="text-black bg-green-600 hover:bg-green-800 font-medium px-5 py-2">
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
